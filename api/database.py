@@ -15,8 +15,8 @@ def getConn():
     try:
         # conn = mysql.connector.connect(host="localhost", user="root",
         #                             password="e3231441221", database=Database)
-        conn = mysql.connector.connect(unix_socket='xmen-283720:southamerica-east1:database1',
-                                    user="root", password="e3231441221", database=Database)
+        conn = mysql.connector.connect(unix_socket='/cloudsql/xmen-283720:southamerica-east1:database1',
+                                    user="root", password="root", database=Database)
         print(conn)
         
         return conn
