@@ -1,6 +1,3 @@
-# import sqlite3
-# from sqlite3 import Error
-# from sqlalchemy import create_engine
 import mysql.connector
 from mysql.connector import errorcode
 from classes import Ratio
@@ -13,10 +10,10 @@ Table = "dna"
 
 def getConn():
     try:
-        # conn = mysql.connector.connect(host="localhost", user="root",
-        #                             password="e3231441221", database=Database)
-        conn = mysql.connector.connect(unix_socket='/cloudsql/xmen-283720:southamerica-east1:database1',
-                                    user="root", password="root", database=Database)
+        conn = mysql.connector.connect(host="localhost", user="root",
+                                    password="root", database=Database)
+        # conn = mysql.connector.connect(unix_socket='/cloudsql/xmen-283720:southamerica-east1:database1',
+        #                             user="root", password="e3231441221", database=Database)
         print(conn)
         
         return conn

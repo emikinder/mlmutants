@@ -4,7 +4,6 @@ from database import getStats, postDna
 from service import isMutant, isDna
 import json
 
-# Database
 app = Flask(__name__)
 api = Api(app)
 

@@ -10,7 +10,7 @@ def run():
 
 def createDatabase():
     conn = mysql.connector.connect(host="localhost", user="root",
-                                password="e3231441221")
+                                password="root")
     try:
         cursor = conn.cursor()
         cursor.execute("CREATE DATABASE IF NOT EXISTS mutants")
@@ -19,7 +19,7 @@ def createDatabase():
 
 def createTable():
     conn = mysql.connector.connect(host="localhost", user="root",
-                                password="e3231441221", database="mutants")
+                                password="root", database="mutants")
     try:
         cursor = conn.cursor()
         cursor.execute("CREATE TABLE `dna` (`id` int NOT NULL AUTO_INCREMENT,`dna` longtext NOT NULL,`isMutant` tinyint(1) NOT NULL DEFAULT '0',PRIMARY KEY (`id`),UNIQUE KEY `id_UNIQUE` (`id`))")
